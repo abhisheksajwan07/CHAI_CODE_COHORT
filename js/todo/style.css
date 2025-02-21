@@ -13,7 +13,13 @@ h1 {
 div {
   margin: 10px auto;
 }
-
+.dark-mode{
+  background-color: black;
+  color:white;
+}
+.dark-mode li {
+  background: #444;
+}
 /* Input and Button */
 #todo-input {
   padding: 10px;
