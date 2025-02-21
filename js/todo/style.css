@@ -1,25 +1,29 @@
 /* General Styles */
 body {
   background-color: #f4f4f4;
-  color: #333;
+  color: black;
   text-align: center;
   font-family: "Poppins", sans-serif;
-}
-/* App Container */
-h1 {
-  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Headings */
+h1 {
+  color: #cd6363;
+  transition: color 0.3s ease;
+}
+
+/* App Container */
 div {
-  margin: 10px auto;
+  margin: 20px auto;
 }
-.dark-mode{
-  background-color: black;
-  color:white;
-}
-.dark-mode li {
-  background: #444;
-}
+
 /* Input and Button */
 #todo-input {
   padding: 10px;
@@ -28,8 +32,18 @@ div {
   border-radius: 5px;
   font-size: 16px;
   outline: none;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  color: black; /* Default text color */
 }
 
+/* Dark Mode Input */
+body.dark-mode #todo-input {
+  background: #222;
+  border: 2px solid #555;
+  color: white;
+}
+
+/* Add Button */
 #add-btn {
   padding: 10px 20px;
   margin-left: 10px;
@@ -39,11 +53,12 @@ div {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #add-btn:hover {
   background-color: #218838;
+  transform: scale(1.05);
 }
 
 /* Todo List */
@@ -57,38 +72,77 @@ div {
 /* Todo Items */
 #todo-container li {
   background-color: white;
-  padding: 10px;
-  margin: 5px 0;
+  padding: 12px;
+  margin: 8px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
 }
-.completed{
-    text-decoration: line-through;
-    color: grey;
+
+/* Dark Mode List Items */
+body.dark-mode #todo-container li {
+  background: #222;
+  color: white;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
-.delete-btn {
-    margin-left: 10px;
-    cursor: pointer;
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
+
+/* Completed Todo */
+.completed {
+  text-decoration: line-through;
+  color: grey;
 }
+
 /* Delete Button */
-#todo-container li button {
-  
+.delete-btn {
+  cursor: pointer;
+  background: rgb(186, 100, 100);
   color: white;
   border: none;
   padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: 0.3s;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-#todo-container li button:hover {
-  background-color: rgb(203, 177, 177);
+.delete-btn:hover {
+  background: darkred;
+}
+
+/* Dark Mode Delete Button */
+body.dark-mode .delete-btn {
+  background: #bb0000;
+}
+
+body.dark-mode .delete-btn:hover {
+  background: #880000;
+}
+
+/* Toggle Button */
+#theme-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#theme-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Theme Button */
+body.dark-mode #theme-button {
+  background: #555;
+  color: white;
+}
+
+body.dark-mode #theme-button:hover {
+  background: #777;
 }
