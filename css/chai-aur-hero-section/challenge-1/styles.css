@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: #0a0a0a;
+  background-image: linear-gradient(to bottom, #150f20, #120e1a, #0b0b0d);
+ 
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.announcement {
+  margin-bottom: 2rem;
+}
+
+.announcement-link {
+  padding: 1rem;
+  background-color: #1f1a29;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.announcement-link:hover {
+  background-color: #2b2638;
+  transition: background-color 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.announcement-text {
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.announcement-button {
+  padding: 0.5rem 1rem;
+  background-color: #36313f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+
+.hero-content {
+  
+  text-align: center;
+  /* background-color: aqua; */
+  max-width:70%;
+  margin: 0 auto;
+}
+
+.hero-title {
+  color: white;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-width:55%;
+  margin: 0 auto;
+  margin-bottom:2rem;
+  color:#B6B6B8;
+}
+
+.cta-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap:0.4rem;
+  padding: 1rem 1.7rem;
+  font-size:large;
+  border-radius: 30px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #6b5af4, #8e78f4);
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.2);
+  background: linear-gradient(90deg, #8e78f4, #6b5af4);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .announcement-link {
+    font-size: 0.75rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}

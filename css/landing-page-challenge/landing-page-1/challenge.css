@@ -1,0 +1,151 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /* Basic styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/chaigym.png);
+  background-position: center;
+  background-size: cover;
+  
+} /* Navbar styles */
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.logo {
+  /* Add styles for the logo */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 20px;
+}
+.logo img {
+  /* Add styles for logo image */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+.nav-links a {
+  /* Add styles for nav links */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 50px;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-links a:hover {
+  color: rgb(18, 180, 18); 
+  border-bottom: 2px solid rgb(18, 180, 18);
+  
+}
+
+
+.hero {
+  /* Add styles for hero section */
+  padding: 20px 20px;
+  height:calc(100vh - 80px);
+  /* background-color: blue; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  /* Add styles for hero content */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 700px;
+  max-height: 200px;
+  margin-bottom: 50px; /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.hero-content h1 {
+  /* Add styles for hero heading */
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  /* Add styles for hero paragraph */
+  color: white;
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+.cta-button {
+  /* Add styles for CTA button */
+  background-color: white;
+  color: black;
+  background-color: rgb(255, 165, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  outline: none;
+  border: none;
+}
+.cta-button:hover {
+  /* Add hover styles for CTA button */
+  background-color: rgb(255, 140, 0);
+  transform: scale(1.1);
+} /* Features section styles */
+.features {
+  /* Add styles for features section */
+  width: 90%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  justify-content: center;
+  padding: 30px 60px;
+  background-color: #0c0b0b;
+  opacity: 0.8;
+}
+.feature {
+  /* Add styles for each feature block */
+  border: 1px solid orange;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+.feature img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.feature h3 {
+  /* Add styles for feature heading */
+  color: orange;
+}
+.feature p {
+  /* Add styles for feature paragraph */
+  color: aliceblue;
+}
+.feature:hover {
+  background-color: rgba(
+    255,
+    165,
+    0,
+    0.2
+  ); /* Light orange background on hover */
+  transform: scale(1.05); /* Slightly increase the size of the block on hover */
+}

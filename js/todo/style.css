@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+/* App Container */
+h1 {
+  color: #333;
+}
+
+div {
+  margin: 10px auto;
+}
+
+/* Input and Button */
+#todo-input {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+#add-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #218838;
+}
+
+/* Todo List */
+#todo-container {
+  list-style-type: none;
+  padding: 0;
+  max-width: 350px;
+  margin: auto;
+}
+
+/* Todo Items */
+#todo-container li {
+  background-color: white;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.completed{
+    text-decoration: line-through;
+    color: grey;
+}
+.delete-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* Delete Button */
+#todo-container li button {
+  
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+#todo-container li button:hover {
+  background-color: rgb(203, 177, 177);
+}
