@@ -45,12 +45,18 @@ taskList.addEventListener("change", function (e) {
 taskList.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-button")) {
     e.target.parentElement.remove();
+    updateStats();
+    if (taskList.children.length === 0) {
+      const emptyMessage = document.createElement("li");
+      emptyMessage.classList.add("empty-list");
+      emptyMessage.textContent = "No tasks yet. Add one above!";
+      taskList.appendChild(emptyMessage);
+    }
   }
 });
 function updateStats() {
   const tasks = document.querySelectorAll(".task-item");
   const completed = document.querySelectorAll(".task-item.completed");
-
   totalTasks.textContent = `Total tasks: ${tasks.length}`;
   completedTasks.textContent = `Completed: ${completed.length}`;
 }
