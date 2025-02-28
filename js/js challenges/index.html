@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -117,5 +117,148 @@
         </div>
       </div>
     </main>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-900 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-xl font-bold">Project Name</a>
+        <div class="flex items-center space-x-4">
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="text-xl">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="menu-btn" class="md:hidden text-xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#features" class="hover:underline">Features</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-blue-500 text-white">
+      <h1 class="text-4xl font-bold">Welcome to Project Showcase</h1>
+      <p class="mt-4 text-lg">
+        Explore interactive coding challenges and projects
+      </p>
+      <a
+        href="#projects"
+        class="mt-6 inline-block bg-white text-blue-600 px-6 py-2 rounded-lg shadow-lg"
+        >Get Started</a
+      >
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold">Why Choose This?</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <i class="fas fa-code text-3xl"></i>
+            <h3 class="text-xl font-bold mt-4">Hands-on Learning</h3>
+            <p>Practical challenges to master coding.</p>
+          </div>
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <i class="fas fa-graduation-cap text-3xl"></i>
+            <h3 class="text-xl font-bold mt-4">Step-by-Step Progress</h3>
+            <p>Challenges from beginner to advanced.</p>
+          </div>
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <i class="fas fa-laptop-code text-3xl"></i>
+            <h3 class="text-xl font-bold mt-4">Real-World Skills</h3>
+            <p>Build projects that matter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-200">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
+          <!-- Existing Projects -->
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <a href="#">Project 1</a>
+          </div>
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <a href="#">Project 2</a>
+          </div>
+
+          <!-- JS DOM Challenges -->
+          <div class="p-6 bg-white shadow-lg rounded-lg">
+            <h3 class="text-xl font-bold">JS DOM Challenges</h3>
+            <ul class="space-y-3 mt-4">
+              <li>
+                <a href="./challenge-1/index.html" class="text-blue-600 hover:underline">
+                  Light Bulb Toggle 💡
+                </a>
+              </li>
+              <li>
+                <a href="./challenge-2/index.html" class="text-blue-600 hover:underline">
+                  Change Text Colour 🦎
+                </a>
+              </li>
+              <li>
+                <a href="./challenge-3/index.html" class="text-blue-600 hover:underline">
+                  Real-time Form Input Display 📋
+                </a>
+              </li>
+              <li>
+                <a href="./challenge-4/index.html" class="text-blue-600 hover:underline">
+                  Task Management 🧏🏻‍♂️
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center py-4">
+      <p>&copy; 2025 Project Showcase. Built with ❤️ by Abhishek</p>
+      <a
+        href="https://github.com/your-repo-link"
+        target="_blank"
+        class="inline-block mt-2 text-lg text-white bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 transition"
+      >
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </footer>
+
+    <script>
+      // Theme Toggle Script
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("bg-gray-900");
+        body.classList.toggle("text-white");
+        themeToggle.innerHTML =
+          body.classList.contains("bg-gray-900")
+            ? '<i class="fas fa-sun"></i>'
+            : '<i class="fas fa-moon"></i>';
+      });
+    </script>
   </body>
 </html>
