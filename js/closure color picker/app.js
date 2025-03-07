@@ -4,6 +4,17 @@ function startColorApp() {
   const buttonArea = document.querySelector("#buttonContainer");
 
   let usedColors = [];
+  // function makecolorButton(color){
+  //   const button = document.createElement("button");
+  //   button.style.backgroundColor = color;
+  //   button.innerHTML = color;
+  //   button.className = "color-button";
+  //   button.addEventListener("click",function(){
+  //     document.body.style.backgroundColor = color;
+  //     button.textContent=`${color}4`;
+  //     setTim
+  //   })
+  // }
   function makeColorButton(color) {
     const button = document.createElement("button");
 
@@ -53,6 +64,5 @@ function startColorApp() {
         }
     }
   })
-
 }
 document.addEventListener("DOMContentLoaded", startColorApp);
